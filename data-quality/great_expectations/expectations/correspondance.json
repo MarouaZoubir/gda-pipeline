@@ -1,0 +1,61 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "correspondance",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "idCorrespondance",
+          "dateDerniereModification",
+          "dateEnvoi",
+          "messsage",
+          "objet",
+          "idTypeCorrespondance",
+          "idUser"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "objet",
+        "mostly": 0.95,
+        "regex": "^[\\w\\s\\d\u00e9\u00e8\u00ea\u00eb\u00e0\u00e2\u00e4\u00f4\u00f6\u00fb\u00fc\u00e7\u00c9\u00c8\u00ca\u00cb\u00c0\u00c2\u00c4\u00d4\u00d6\u00db\u00dc\u00c7.,;:!?()-]{10,200}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "messsage",
+        "min_value": 20,
+        "mostly": 0.98
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "idTypeCorrespondance",
+        "mostly": 0.95,
+        "value_set": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.15.50"
+  }
+}

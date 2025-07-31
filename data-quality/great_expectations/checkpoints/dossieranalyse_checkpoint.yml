@@ -1,0 +1,19 @@
+name: dossieranalyse_checkpoint
+config_version: 1.0
+class_name: SimpleCheckpoint
+expectation_suite_name: dossieranalyse
+validations:
+- batch_request:
+    datasource_name: my_datasource_postgres
+    data_connector_name: default_inferred_data_connector_name
+    data_asset_name: uatrs_db.dossieranalyse
+    batch_spec_passthrough:
+      schema_name: uatrs_db
+      table_name: dossieranalyse
+action_list:
+- name: store_validation_result
+  action:
+    class_name: StoreValidationResultAction
+- name: update_data_docs
+  action:
+    class_name: UpdateDataDocsAction

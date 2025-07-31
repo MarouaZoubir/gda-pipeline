@@ -1,0 +1,1318 @@
+version: 2
+
+models:
+  - name: stg_annonce
+    description: "Staging model for annonce table"
+    columns:
+      - name: idannonce
+        description: "Unique identifier for annonce"
+      - name: datedernieremodification
+        description: "Date of last modification for annonce"
+      - name: datedebutannonce
+        description: "Start date of annonce"
+      - name: datefinannonce
+        description: "End date of annonce"
+      - name: description
+        description: "Description of annonce"
+      - name: enabled
+        description: "Indicates if annonce is enabled"
+      - name: intitule
+        description: "Title of annonce"
+  - name: stg_bonanalyse
+    description: "Staging model for bonanalyse table"
+    columns:
+      - name: idbonanalyse
+        description: "Unique identifier for bonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for bonanalyse"
+      - name: commentairevalidation
+        description: "Comment for validation of bonanalyse"
+      - name: datecreation
+        description: "Creation date of bonanalyse"
+      - name: datestatut
+        description: "Status date of bonanalyse"
+      - name: isactuel
+        description: "Indicates if bonanalyse is current"
+      - name: montantinitial
+        description: "Initial amount of bonanalyse"
+      - name: numeroba
+        description: "Number of bonanalyse"
+      - name: idetablissementconventionne
+        description: "ID of the associated conventioned establishment"
+      - name: idprofesseur
+        description: "ID of the associated professor"
+      - name: idservice
+        description: "ID of the associated service"
+      - name: idstatutbonanalyse
+        description: "ID of the status of bonanalyse"
+      - name: idstatutconfirmationdemandebonanalyse
+        description: "ID of the confirmation status of bonanalyse request"
+      - name: active
+        description: "Indicates if bonanalyse is active"
+      - name: suivieparuser
+        description: "User following the bonanalyse"
+  - name: stg_calendrier
+    description: "Staging model for calendrier table"
+    columns:
+      - name: idcalendrier
+        description: "Unique identifier for calendrier"
+      - name: datedernieremodification
+        description: "Date of last modification for calendrier"
+  - name: stg_champficheanalyse
+    description: "Staging model for champficheanalyse table"
+    columns:
+      - name: idchampficheanalyse
+        description: "Unique identifier for champficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for champficheanalyse"
+      - name: abreviation
+        description: "Abbreviation of champficheanalyse"
+      - name: intitule
+        description: "Title of champficheanalyse"
+      - name: ordre
+        description: "Order of champficheanalyse"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+  - name: stg_civilite
+    description: "Staging model for civilite table"
+    columns:
+      - name: idcivilite
+        description: "Unique identifier for civilite"
+      - name: datedernieremodification
+        description: "Date of last modification for civilite"
+      - name: abreviation
+        description: "Abbreviation of civilite"
+      - name: intitule
+        description: "Title of civilite"
+      - name: ordre
+        description: "Order of civilite"
+  - name: stg_convention
+    description: "Staging model for convention table"
+    columns:
+      - name: idconvention
+        description: "Unique identifier for convention"
+      - name: datedernieremodification
+        description: "Date of last modification for convention"
+      - name: intitule
+        description: "Title of convention"
+      - name: datedebut
+        description: "Start date of convention"
+      - name: datefin
+        description: "End date of convention"
+      - name: idetablissementcaractereadministratif
+        description: "ID of the associated administrative character establishment"
+      - name: idetablissementcaracterecommercial
+        description: "ID of the associated commercial character establishment"
+  - name: stg_correspondance
+    description: "Staging model for correspondance table"
+    columns:
+      - name: idcorrespondance
+        description: "Unique identifier for correspondance"
+      - name: datedernieremodification
+        description: "Date of last modification for correspondance"
+      - name: dateenvoi
+        description: "Date of sending for correspondance"
+      - name: message
+        description: "Message content of correspondance"
+      - name: objet
+        description: "Subject of correspondance"
+      - name: idtypecorrespondance
+        description: "ID of the type of correspondance"
+      - name: iduser
+        description: "ID of the user associated with correspondance"
+  - name: stg_demandeficheanalyse
+    description: "Staging model for demandeficheanalyse table"
+    columns:
+      - name: iddemandeficheanalyse
+        description: "Unique identifier for demandeficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for demandeficheanalyse"
+      - name: idspecialite
+        description: "ID of the associated specialty"
+      - name: iddiplome
+        description: "ID of the associated diploma"
+      - name: idmoyenpaiement
+        description: "ID of the associated payment method"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: numerodemandeficheanalyse
+        description: "Number of demandeficheanalyse"
+      - name: idstatutdemandeficheanalyse
+        description: "ID of the status of demandeficheanalyse"
+  - name: stg_detailbonanalysemoyenscontact
+    description: "Staging model for detailbonanalysemoyenscontact table"
+    columns:
+      - name: iddetailbonanalysemoyenscontact
+        description: "Unique identifier for detailbonanalysemoyenscontact"
+      - name: datedernieremodification
+        description: "Date of last modification for detailbonanalysemoyenscontact"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: idmoyencontact
+        description: "ID of the associated contact method"
+  - name: stg_detailbonanalyseservice
+    description: "Staging model for detailbonanalyseservice table"
+    columns:
+      - name: iddetailbonanalyseservice
+        description: "Unique identifier for detailbonanalyseservice"
+      - name: datedernieremodification
+        description: "Date of last modification for detailbonanalyseservice"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: idservice
+        description: "ID of the associated service"
+  - name: stg_detailbonanalyseservicestatutfaisabilite
+    description: "Staging model for detailbonanalyseservicestatutfaisabilite table"
+    columns:
+      - name: iddetailbonanalyseservicestatutfaisabilite
+        description: "Unique identifier for detailbonanalyseservicestatutfaisabilite"
+      - name: datedernieremodification
+        description: "Date of last modification for detailbonanalyseservicestatutfaisabilite"
+      - name: commentaire
+        description: "Comment for the service faisability status"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: idstatutfaisabilitedemandebonanalyse
+        description: "ID of the faisability status of bonanalyse request"
+  - name: stg_detailbonanalysestatutconfirmation
+    description: "Staging model for detailbonanalysestatutconfirmation table"
+    columns:
+      - name: iddetailbonanalysestatutconfirmation
+        description: "Unique identifier for detailbonanalysestatutconfirmation"
+      - name: datedernieremodification
+        description: "Date of last modification for detailbonanalysestatutconfirmation"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: idstatutconfirmationdemandebonanalyse
+        description: "ID of the confirmation status of bonanalyse request"
+      - name: commentaire
+        description: "Comment for the bonanalyse status confirmation"
+  - name: stg_detailchampficheanalysesouschampficheanalyse
+    description: "Staging model for detailchampficheanalysesouschampficheanalyse table"
+    columns:
+      - name: iddetailchampficheanalysesouschampficheanalyse
+        description: "Unique identifier for detailchampficheanalysesouschampficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchampficheanalysesouschampficheanalyse"
+      - name: idchampficheanalyse
+        description: "ID of the associated champficheanalyse"
+      - name: idsouschampficheanalyse
+        description: "ID of the associated souschampficheanalyse"
+  - name: stg_detailchampficheanalysevaleurproposeeficheanalyse
+    description: "Staging model for detailchampficheanalysevaleurproposeeficheanalyse table"
+    columns:
+      - name: iddetailchampficheanalysevaleurproposeeficheanalyse
+        description: "Unique identifier for detailchampficheanalysevaleurproposeeficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchampficheanalysevaleurproposeeficheanalyse"
+      - name: idchampficheanalyse
+        description: "ID of the associated champficheanalyse"
+      - name: idvaleurproposeeficheanalyse
+        description: "ID of the proposed value for ficheanalyse"
+      - name: idtypechamp
+        description: "ID of the type of champ"
+      - name: idficheanalyse
+        description: "ID of the associated ficheanalyse"
+      - name: uniteverificationconsommation
+        description: "Unit of verification consumption for the proposed value"
+  - name: stg_detailchargedemaintenanceequipement
+    description: "Staging model for detailchargedemaintenanceequipement table"
+    columns:
+      - name: iddetailchargedemaintenanceequipement
+        description: "Unique identifier for detailchargedemaintenanceequipement"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchargedemaintenanceequipement"
+      - name: datedebutaffectation
+        description: "Start date of equipment maintenance charge assignment"
+      - name: datefinaffectation
+        description: "End date of equipment maintenance charge assignment"
+      - name: isactive
+        description: "Indicates if the equipment maintenance charge assignment is active"
+      - name: idchargedemaintenance
+        description: "ID of the associated maintenance charge"
+      - name: idequipement
+        description: "ID of the associated equipment"
+  - name: stg_detailchargedemandeanalysebonanalyse
+    description: "Staging model for detailchargedemandeanalysebonanalyse table"
+    columns:
+      - name: iddetailchargedemandeanalysebonanalyse
+        description: "Unique identifier for detailchargedemandeanalysebonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchargedemandeanalysebonanalyse"
+      - name: idchargedemandeanalyse
+        description: "ID of the associated charge demande analyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+  - name: stg_detailchargedemandeanalysedevis
+    description: "Staging model for detailchargedemandeanalysedevis table"
+    columns:
+      - name: iddetailchargedemandeanalysedevis
+        description: "Unique identifier for detailchargedemandeanalysedevis"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchargedemandeanalysedevis"
+      - name: idchargedemandeanalyse
+        description: "ID of the associated charge demande analyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+  - name: stg_detailchefdivisiondotation
+    description: "Staging model for detailchefdivisiondotation table"
+    columns:
+      - name: iddetailchefdivisiondotation
+        description: "Unique identifier for detailchefdivisiondotation"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchefdivisiondotation"
+      - name: idchefdivision
+        description: "ID of the associated chef division"
+      - name: iddotation
+        description: "ID of the associated dotation"
+  - name: stg_detailchefserviceservice
+    description: "Staging model for detailchefserviceservice table"
+    columns:
+      - name: iddetailchefserviceservice
+        description: "Unique identifier for detailchefserviceservice"
+      - name: datedernieremodification
+        description: "Date of last modification for detailchefserviceservice"
+      - name: datedebutaffectation
+        description: "Start date of service chef assignment"
+      - name: datefinaffectation
+        description: "End date of service chef assignment"
+      - name: isactive
+        description: "Indicates if the chef service assignment is active"
+      - name: idchefservice
+        description: "ID of the associated chef service"
+      - name: idservice
+        description: "ID of the associated service"
+  - name: stg_detaildevismoyenscontact
+    description: "Staging model for detaildevismoyenscontact table"
+    columns:
+      - name: iddetaildevismoyenscontact
+        description: "Unique identifier for detaildevismoyenscontact"
+      - name: datedernieremodification
+        description: "Date of last modification for detaildevismoyenscontact"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idmoyenscontact
+        description: "ID of the associated contact method"
+  - name: stg_detaildevisservice
+    description: "Staging model for detaildevisservice table"
+    columns:
+      - name: iddetaildevisservice
+        description: "Unique identifier for detaildevisservice"
+      - name: datedernieremodification
+        description: "Date of last modification for detaildevisservice"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idservice
+        description: "ID of the associated service"
+  - name: stg_detaildevisservicestatutfaisabilite
+    description: "Staging model for detaildevisservicestatutfaisabilite table"
+    columns:
+      - name: iddetaildevisservicestatutfaisabilite
+        description: "Unique identifier for detaildevisservicestatutfaisabilite"
+      - name: datedernieremodification
+        description: "Date of last modification for detaildevisservicestatutfaisabilite"
+      - name: commentaire
+        description: "Comment for the service faisability status"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idservice
+        description: "ID of the associated service"
+      - name: idstatutfaisabilitedemandedevis
+        description: "ID of the faisability status of devis request"
+  - name: stg_detaildevisstatutconfirmation
+    description: "Staging model for detaildevisstatutconfirmation table"
+    columns:
+      - name: iddetaildevisstatutconfirmation
+        description: "Unique identifier for detaildevisstatutconfirmation"
+      - name: datedernieremodification
+        description: "Date of last modification for detaildevisstatutconfirmation"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idstatutconfirmationdemandedevis
+        description: "ID of the confirmation status of devis request"
+      - name: commentaire
+        description: "Comment for the devis status confirmation"
+  - name: stg_detaildossieranalyseficheanalyse
+    description: "Staging model for detaildossieranalyseficheanalyse table"
+    columns:
+      - name: iddetaildossieranalyseficheanalyse
+        description: "Unique identifier for detaildossieranalyseficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detaildossieranalyseficheanalyse"
+      - name: iddossieranalyse
+        description: "ID of the associated dossieranalyse"
+      - name: idficheanalyse
+        description: "ID of the associated ficheanalyse"
+  - name: stg_detailequipementtypeanalyse
+    description: "Staging model for detailequipementtypeanalyse table"
+    columns:
+      - name: iddetailequipementtypeanalyse
+        description: "Unique identifier for detailequipementtypeanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailequipementtypeanalyse"
+      - name: idequipement
+        description: "ID of the associated equipment"
+      - name: idtypeanalyse
+        description: "ID of the associated type of analysis"
+  - name: stg_detailfaculteecoleprofesseur
+    description: "Staging model for detailfaculteecoleprofesseur table"
+    columns:
+      - name: iddetailfaculteecoleprofesseur
+        description: "Unique identifier for detailfaculteecoleprofesseur"
+      - name: datedernieremodification
+        description: "Date of last modification for detailfaculteecoleprofesseur"
+      - name: idfaculteecole
+        description: "ID of the associated faculteecole"
+      - name: idprofesseur
+        description: "ID of the associated professor"
+  - name: stg_detaillaboratoireunitemesure
+    description: "Staging model for detaillaboratoireunitemesure table"
+    columns:
+      - name: iddetaillaboratoireunitemesure
+        description: "Unique identifier for detaillaboratoireunitemesure"
+      - name: datedernieremodification
+        description: "Date of last modification for detaillaboratoireunitemesure"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: idunitemesure
+        description: "ID of the associated unit of measure"
+  - name: stg_detailmembreexterneannonce
+    description: "Staging model for detailmembreexterneannonce table"
+    columns:
+      - name: iddetailmembreexterneannonce
+        description: "Unique identifier for detailmembreexterneannonce"
+      - name: datedernieremodification
+        description: "Date of last modification for detailmembreexterneannonce"
+      - name: idannonce
+        description: "ID of the associated annonce"
+      - name: idmembreexterne
+        description: "ID of the associated external member"
+  - name: stg_detailmembreuatrsannonce
+    description: "Staging model for detailmembreuatrsannonce table"
+    columns:
+      - name: iddetailmembreuatrsannonce
+        description: "Unique identifier for detailmembreuatrsannonce"
+      - name: datedernieremodification
+        description: "Date of last modification for detailmembreuatrsannonce"
+      - name: idannonce
+        description: "ID of the associated annonce"
+      - name: idmembreuatrs
+        description: "ID of the associated UATRS member"
+  - name: stg_detailresponsablelaboratoirelaboratoire
+    description: "Staging model for detailresponsablelaboratoirelaboratoire table"
+    columns:
+      - name: iddetailresponsablelaboratoirelaboratoire
+        description: "Unique identifier for detailresponsablelaboratoirelaboratoire"
+      - name: datedernieremodification
+        description: "Date of last modification for detailresponsablelaboratoirelaboratoire"
+      - name: datedebutaffectation
+        description: "Start date of laboratory responsible assignment"
+      - name: datefinaffectation
+        description: "End date of laboratory responsible assignment"
+      - name: isactive
+        description: "Indicates if the laboratory responsible assignment is active"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: idresponsablelaboratoire
+        description: "ID of the associated responsible laboratory"
+  - name: stg_detailsbonanalyse
+    description: "Staging model for detailsbonanalyse table"
+    columns:
+      - name: iddetailsbonanalyse
+        description: "Unique identifier for detailsbonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailsbonanalyse"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: iddetaillaboratoireunitemesure
+        description: "ID of the associated laboratory unit of measure detail"
+      - name: iddetailtypeanalyseunitemesure
+        description: "ID of the associated type analysis unit of measure detail"
+      - name: valeur
+        description: "Value of the detail for bonanalyse"
+  - name: stg_detailsdevis
+    description: "Staging model for detailsdevis table"
+    columns:
+      - name: iddetailsdevis
+        description: "Unique identifier for detailsdevis"
+      - name: datedernieremodification
+        description: "Date of last modification for detailsdevis"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: iddetaillaboratoireunitemesure
+        description: "ID of the associated laboratory unit of measure detail"
+      - name: iddetailtypeanalyseunitemesure
+        description: "ID of the associated type analysis unit of measure detail"
+      - name: valeur
+        description: "Value of the detail for devis"
+  - name: stg_detailsficheanalyse
+    description: "Staging model for detailsficheanalyse table"
+    columns:
+      - name: iddetailsficheanalyse
+        description: "Unique identifier for detailsficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailsficheanalyse"
+      - name: iddetailchampficheanalysevaleurproposeeficheanalyse
+        description: "ID of the associated detail champ fiche analyse proposed value"
+      - name: iddetailsouschampficheanalysevaleurproposeeficheanalyse
+        description: "ID of the associated detail sous champ fiche analyse proposed value"
+      - name: idficheanalyse
+        description: "ID of the associated ficheanalyse"
+      - name: valeur
+        description: "Value of the detail for ficheanalyse"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idvaleurproposeeficheanalyse
+        description: "ID of the proposed value for ficheanalyse"
+      - name: numerodemandeficheanalyse
+        description: "Number of demandeficheanalyse associated with the detail"
+      - name: iddemandeficheanalyse
+        description: "ID of the associated demandeficheanalyse"
+      - name: isconsommee
+        description: "Indicates if the detail is consumed"
+  - name: stg_detailsouschampficheanalysevaleurproposeeficheanalyse
+    description: "Staging model for detailsouschampficheanalysevaleurproposeeficheanalyse table"
+    columns:
+      - name: iddetailsouschampficheanalysevaleurproposeeficheanalyse
+        description: "Unique identifier for detailsouschampficheanalysevaleurproposeeficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for detailsouschampficheanalysevaleurproposeeficheanalyse"
+      - name: idsouschampficheanalyse
+        description: "ID of the associated sous champ fiche analyse"
+      - name: idvaleurproposeeficheanalyse
+        description: "ID of the proposed value for ficheanalyse"
+      - name: idtypechamp
+        description: "ID of the type of champ"
+      - name: uniteverificationconsommation
+        description: "Unit of verification consumption for the proposed value"
+  - name: stg_detailstatutcorrespondance
+    description: "Staging model for detailstatutcorrespondance table"
+    columns:
+      - name: iddetailstatutcorrespondance
+        description: "Unique identifier for detailstatutcorrespondance"
+      - name: datedernieremodification
+        description: "Date of last modification for detailstatutcorrespondance"
+      - name: commentaire
+        description: "Comment for the status of correspondance"
+      - name: datestatut
+        description: "Status date of correspondance"
+      - name: idcorrespondance
+        description: "ID of the associated correspondance"
+      - name: idstatutcorrespondance
+        description: "ID of the status of correspondance"
+      - name: iduser
+        description: "ID of the user associated with the status of correspondance"
+  - name: stg_detailtypeanalyseunitemesure
+    description: "Staging model for detailtypeanalyseunitemesure table"
+    columns:
+      - name: iddetailtypeanalyseunitemesure
+        description: "Unique identifier for detailtypeanalyseunitemesure"
+      - name: datedernieremodification
+        description: "Date of last modification for detailtypeanalyseunitemesure"
+      - name: idtypeanalyse
+        description: "ID of the associated type of analysis"
+      - name: idunitemesure
+        description: "ID of the associated unit of measure"
+  - name: stg_devis
+    description: "Staging model for devis table"
+    columns:
+      - name: iddevis
+        description: "Unique identifier for devis"
+      - name: datedernieremodification
+        description: "Date of last modification for devis"
+      - name: datecreation
+        description: "Creation date of devis"
+      - name: montantinitial
+        description: "Initial amount of devis"
+      - name: numerodevis
+        description: "Number of devis"
+      - name: idstatutconfirmationdemandedevis
+        description: "ID of the confirmation status of devis request"
+      - name: idparticulier
+        description: "ID of the associated individual"
+      - name: consomme
+        description: "Indicates if devis is consumed"
+      - name: iddemandeuretablissementcaractereadministratif
+        description: "ID of the request for administrative character establishment"
+      - name: iddemandeuretablissementcaracterecommercial
+        description: "ID of the request for commercial character establishment"
+      - name: active
+        description: "Indicates if devis is active"
+  - name: stg_diplome
+    description: "Staging model for diplome table"
+    columns:
+      - name: iddiplome
+        description: "Unique identifier for diplome"
+      - name: datedernieremodification
+        description: "Date of last modification for diplome"
+      - name: intitule
+        description: "Title of diplome"
+      - name: abreviation
+        description: "Abbreviation of diplome"
+      - name: ordre
+        description: "Order of diplome"
+  - name: stg_dossieranalyse
+    description: "Staging model for dossieranalyse table"
+    columns:
+      - name: iddossieranalyse
+        description: "Unique identifier for dossieranalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for dossieranalyse"
+      - name: datecreation
+        description: "Creation date of dossieranalyse"
+      - name: idfacturation
+        description: "ID of the associated facturation"
+      - name: idbonanalyse
+        description: "ID of the associated bonanalyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idetudiant
+        description: "ID of the associated student"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: numerodemandeficheanalyse
+        description: "Number of demandeficheanalyse associated with dossieranalyse"
+      - name: numerodossieranalyse
+        description: "Number of dossieranalyse"
+      - name: suivieparuser
+        description: "User following the dossieranalyse"
+  - name: stg_dotation
+    description: "Staging model for dotation table"
+    columns:
+      - name: iddotation
+        description: "Unique identifier for dotation"
+      - name: datedernieremodification
+        description: "Date of last modification for dotation"
+      - name: dateattribution
+        description: "Date of attribution for dotation"
+      - name: isactive
+        description: "Indicates if dotation is active"
+      - name: modifiable
+        description: "Indicates if dotation is modifiable"
+      - name: montant
+        description: "Amount of dotation"
+      - name: idetablissementconventionne
+        description: "ID of the associated conventioned establishment"
+      - name: idfaculteecole
+        description: "ID of the associated faculteecole"
+  - name: stg_equipement
+    description: "Staging model for equipement table"
+    columns:
+      - name: idequipement
+        description: "Unique identifier for equipement"
+      - name: datedernieremodification
+        description: "Date of last modification for equipement"
+      - name: natureequipement
+        description: "Nature of the equipement"
+      - name: ordre
+        description: "Order of the equipement"
+      - name: designation
+        description: "Designation of the equipement"
+      - name: marque
+        description: "Brand of the equipement"
+      - name: reference
+        description: "Reference of the equipement"
+      - name: idstatutequipement
+        description: "ID of the status of equipement"
+  - name: stg_etablissementcaractereadministratif
+    description: "Staging model for etablissementcaractereadministratif table"
+    columns:
+      - name: idetablissementcaractereadministratif
+        description: "Unique identifier for etablissementcaractereadministratif"
+      - name: datedernieremodification
+        description: "Date of last modification for etablissementcaractereadministratif"
+      - name: intitule
+        description: "Title of etablissementcaractereadministratif"
+      - name: abreviation
+        description: "Abbreviation of etablissementcaractereadministratif"
+      - name: ville
+        description: "City of etablissementcaractereadministratif"
+      - name: ordre
+        description: "Order of etablissementcaractereadministratif"
+      - name: adresse
+        description: "Address of etablissementcaractereadministratif"
+      - name: email
+        description: "Email of etablissementcaractereadministratif"
+      - name: telephone
+        description: "Telephone of etablissementcaractereadministratif"
+      - name: fax
+        description: "Fax of etablissementcaractereadministratif"
+      - name: idtypeetablissement
+        description: "ID of the type of etablissement"
+  - name: stg_etablissementcaracterecommercial
+    description: "Staging model for etablissementcaracterecommercial table"
+    columns:
+      - name: idetablissementcaracterecommercial
+        description: "Unique identifier for etablissementcaracterecommercial"
+      - name: datedernieremodification
+        description: "Date of last modification for etablissementcaracterecommercial"
+      - name: intitule
+        description: "Title of etablissementcaracterecommercial"
+      - name: abreviation
+        description: "Abbreviation of etablissementcaracterecommercial"
+      - name: ville
+        description: "City of etablissementcaracterecommercial"
+      - name: ordre
+        description: "Order of etablissementcaracterecommercial"
+      - name: adresse
+        description: "Address of etablissementcaracterecommercial"
+      - name: email
+        description: "Email of etablissementcaracterecommercial"
+      - name: telephone
+        description: "Telephone of etablissementcaracterecommercial"
+      - name: fax
+        description: "Fax of etablissementcaracterecommercial"
+      - name: idsecteur
+        description: "ID of the associated sector"
+  - name: stg_etablissementnonuniversitaire
+    description: "Staging model for etablissementnonuniversitaire table"
+    columns:
+      - name: dtype
+        description: "Type of etablissementnonuniversitaire"
+      - name: idetablissementnonuniversitaire
+        description: "Unique identifier for etablissementnonuniversitaire"
+      - name: datedernieremodification
+        description: "Date of last modification for etablissementnonuniversitaire"
+      - name: adresse
+        description: "Address of etablissementnonuniversitaire"
+      - name: domaine
+        description: "Domain of etablissementnonuniversitaire"
+      - name: nom
+        description: "Name of etablissementnonuniversitaire"
+      - name: dateconvention
+        description: "Date of convention for etablissementnonuniversitaire"
+      - name: referenceconvention
+        description: "Reference of convention for etablissementnonuniversitaire"
+      - name: idsecteur
+        description: "ID of the associated sector"
+      - name: etablissementtype
+        description: "Type of etablissementnonuniversitaire"
+  - name: stg_etablissementuniversitaire
+    description: "Staging model for etablissementuniversitaire table"
+    columns:
+      - name: idetablissementuniversitaire
+        description: "Unique identifier for etablissementuniversitaire"
+      - name: datedernieremodification
+        description: "Date of last modification for etablissementuniversitaire"
+      - name: adresse
+        description: "Address of etablissementuniversitaire"
+      - name: nom
+        description: "Name of etablissementuniversitaire"
+  - name: stg_etudiant
+    description: "Staging model for etudiant table"
+    columns:
+      - name: idetudiant
+        description: "Unique identifier for etudiant"
+      - name: datedernieremodification
+        description: "Date of last modification for etudiant"
+      - name: cin
+        description: "National ID of etudiant"
+      - name: cne
+        description: "National student number of etudiant"
+      - name: nom
+        description: "Last name of etudiant"
+      - name: numeropasseport
+        description: "Passport number of etudiant"
+      - name: prenom
+        description: "First name of etudiant"
+      - name: iddiplome
+        description: "ID of the associated diploma"
+      - name: idetablissementuniversitaire
+        description: "ID of the associated university establishment"
+  - name: stg_facturation
+    description: "Staging model for facturation table"
+    columns:
+      - name: idfacturation
+        description: "Unique identifier for facturation"
+      - name: datedernieremodification
+        description: "Date of last modification for facturation"
+      - name: datecreation
+        description: "Creation date of facturation"
+      - name: numero
+        description: "Number of facturation"
+  - name: stg_faculteecole
+    description: "Staging model for faculteecole table"
+    columns:
+      - name: idfaculteecole
+        description: "Unique identifier for faculteecole"
+      - name: datedernieremodification
+        description: "Date of last modification for faculteecole"
+      - name: adresse
+        description: "Address of faculteecole"
+      - name: nom
+        description: "Name of faculteecole"
+      - name: signataires
+        description: "Signatories of faculteecole"
+      - name: idetablissementuniversitaire
+        description: "ID of the associated university establishment"
+  - name: stg_ficheanalyse
+    description: "Staging model for ficheanalyse table"
+    columns:
+      - name: idficheanalyse
+        description: "Unique identifier for ficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for ficheanalyse"
+      - name: datecreation
+        description: "Creation date of ficheanalyse"
+      - name: datedemande
+        description: "Date of request for ficheanalyse"
+      - name: iddevis
+        description: "ID of the associated devis"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: caracteristiqueechantillon
+        description: "Characteristics of the sample for ficheanalyse"
+      - name: commentaire
+        description: "Comment for ficheanalyse"
+  - name: stg_grade
+    description: "Staging model for grade table"
+    columns:
+      - name: idgrade
+        description: "Unique identifier for grade"
+      - name: datedernieremodification
+        description: "Date of last modification for grade"
+      - name: abreviation
+        description: "Abbreviation of grade"
+      - name: intitule
+        description: "Title of grade"
+      - name: ordre
+        description: "Order of grade"
+  - name: stg_history
+    description: "Staging model for history table"
+    columns:
+      - name: idhistory
+        description: "Unique identifier for history"
+      - name: datedernieremodification
+        description: "Date of last modification for history"
+      - name: intitule
+        description: "Title of history"
+      - name: dateoperation
+        description: "Date of operation for history"
+      - name: description
+        description: "Description of history operation"
+      - name: iduser
+        description: "ID of the user associated with the history operation"
+  - name: stg_laboratoire
+    description: "Staging model for laboratoire table"
+    columns:
+      - name: idlaboratoire
+        description: "Unique identifier for laboratoire"
+      - name: datedernieremodification
+        description: "Date of last modification for laboratoire"
+      - name: abreviation
+        description: "Abbreviation of laboratoire"
+      - name: intitule
+        description: "Title of laboratoire"
+      - name: ordre
+        description: "Order of laboratoire"
+      - name: idservice
+        description: "ID of the associated service"
+      - name: tariforganismeadministratif
+        description: "Tariff for administrative organism associated with laboratoire"
+      - name: tariforganismecommercial
+        description: "Tariff for commercial organism associated with laboratoire"
+      - name: desactivation
+        description: "Indicates if laboratoire is deactivated"
+      - name: disponibilite
+        description: "Indicates if laboratoire is available"
+  - name: stg_membreexterne
+    description: "Staging model for membreexterne table"
+    columns:
+      - name: dtype
+        description: "Type of membreexterne"
+      - name: idmembreexterne
+        description: "Unique identifier for membreexterne"
+      - name: datedernieremodification
+        description: "Date of last modification for membreexterne"
+      - name: adresse
+        description: "Address of membreexterne"
+      - name: cin
+        description: "National ID of membreexterne"
+      - name: email
+        description: "Email of membreexterne"
+      - name: fax
+        description: "Fax of membreexterne"
+      - name: nom
+        description: "Last name of membreexterne"
+      - name: numeropasseport
+        description: "Passport number of membreexterne"
+      - name: prenom
+        description: "First name of membreexterne"
+      - name: telephone
+        description: "Telephone of membreexterne"
+      - name: orcid
+        description: "ORCID of membreexterne"
+      - name: datedebutaffectation
+        description: "Start date of membreexterne assignment"
+      - name: datefinaffectation
+        description: "End date of membreexterne assignment"
+      - name: isactive
+        description: "Indicates if membreexterne is active"
+      - name: ville
+        description: "City of membreexterne"
+      - name: idcivilite
+        description: "ID of the associated civilite"
+      - name: idpays
+        description: "ID of the associated pays"
+      - name: iduser
+        description: "ID of the user associated with membreexterne"
+      - name: idfaculteecole
+        description: "ID of the associated faculteecole"
+      - name: idetablissementnonuniversitaire
+        description: "ID of the associated non-university establishment"
+      - name: equipe
+        description: "Team associated with membreexterne"
+      - name: laboratoire
+        description: "Laboratory associated with membreexterne"
+      - name: idgrade
+        description: "ID of the associated grade"
+      - name: idspecialite
+        description: "ID of the associated specialite"
+      - name: idetablissementcaractereadministratif
+        description: "ID of the associated administrative character establishment"
+      - name: idetablissementcaracterecommercial
+        description: "ID of the associated commercial character establishment"
+      - name: ice
+        description: "ICE of membreexterne"
+  - name: stg_membreuatrs
+    description: "Staging model for membreuatrs table"
+    columns:
+      - name: dtype
+        description: "Type of membreuatrs"
+      - name: idmembreuatrs
+        description: "Unique identifier for membreuatrs"
+      - name: datedernieremodification
+        description: "Date of last modification for membreuatrs"
+      - name: adresse
+        description: "Address of membreuatrs"
+      - name: cin
+        description: "National ID of membreuatrs"
+      - name: nom
+        description: "Last name of membreuatrs"
+      - name: numeroimmatriculation
+        description: "Registration number of membreuatrs"
+      - name: prenom
+        description: "First name of membreuatrs"
+      - name: telephone
+        description: "Telephone of membreuatrs"
+      - name: idcivilite
+        description: "ID of the associated civilite"
+      - name: idgrade
+        description: "ID of the associated grade"
+      - name: iduser
+        description: "ID of the user associated with membreuatrs"
+  - name: stg_moyenpaiement
+    description: "Staging model for moyenspaiement table"
+    columns:
+      - name: idmoyenpaiement
+        description: "Unique identifier for moyenspaiement"
+      - name: datedernieremodification
+        description: "Date of last modification for moyenspaiement"
+      - name: abreviation
+        description: "Abbreviation of moyenspaiement"
+      - name: intitule
+        description: "Title of moyenspaiement"
+      - name: ordre
+        description: "Order of moyenspaiement"
+  - name: stg_moyenscontact
+    description: "Staging model for moyenscontact table"
+    columns:
+      - name: idmoyenscontact
+        description: "Unique identifier for moyenscontact"
+      - name: datedernieremodification
+        description: "Date of last modification for moyenscontact"
+      - name: abreviation
+        description: "Abbreviation of moyenscontact"
+      - name: intitule
+        description: "Title of moyenscontact"
+      - name: ordre
+        description: "Order of moyenscontact"
+  - name: stg_operationanalyse
+    description: "Staging model for operationanalyse table"
+    columns:
+      - name: idoperationanalyse
+        description: "Unique identifier for operationanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for operationanalyse"
+      - name: cheminrapportfile
+        description: "File path of the report for operationanalyse"
+      - name: idficheanalyse
+        description: "ID of the associated ficheanalyse"
+      - name: idstatutoperationanalyse
+        description: "ID of the status of operationanalyse"
+  - name: stg_ordreanalyse
+    description: "Staging model for ordreamalyse table"
+    columns:
+      - name: idordreanalyse
+        description: "Unique identifier for ordreamalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for ordreamalyse"
+      - name: datecreation
+        description: "Creation date of ordreamalyse"
+      - name: iddossieranalyse
+        description: "ID of the associated dossieranalyse"
+      - name: numeroordreanalyse
+        description: "Order number of ordreamalyse"
+  - name: stg_pays
+    description: "Staging model for pays table"
+    columns:
+      - name: idpays
+        description: "Unique identifier for pays"
+      - name: datedernieremodification
+        description: "Date of last modification for pays"
+      - name: abreviation
+        description: "Abbreviation of pays"
+      - name: intitule
+        description: "Title of pays"
+      - name: ordre
+        description: "Order of pays"
+  - name: stg_secteur
+    description: "Staging model for secteur table"
+    columns:
+      - name: idsecteur
+        description: "Unique identifier for secteur"
+      - name: datedernieremodification
+        description: "Date of last modification for secteur"
+      - name: abreviation
+        description: "Abbreviation of secteur"
+      - name: intitule
+        description: "Title of secteur"
+      - name: ordre
+        description: "Order of secteur"
+  - name: stg_service
+    description: "Staging model for service table"
+    columns:
+      - name: idservice
+        description: "Unique identifier for service"
+      - name: datedernieremodification
+        description: "Date of last modification for service"
+      - name: abreviation
+        description: "Abbreviation of service"
+      - name: intitule
+        description: "Title of service"
+      - name: ordre
+        description: "Order of service"
+      - name: consommationpartielleba
+        description: "Indicates if partial consumption is allowed for service"
+  - name: stg_souschampficheanalyse
+    description: "Staging model for souschampficheanalyse table"
+    columns:
+      - name: idsouschampficheanalyse
+        description: "Unique identifier for souschampficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for souschampficheanalyse"
+      - name: abreviation
+        description: "Abbreviation of souschampficheanalyse"
+      - name: intitule
+        description: "Title of souschampficheanalyse"
+      - name: ordre
+        description: "Order of souschampficheanalyse"
+      - name: idtypeanalyse
+        description: "ID of the associated type of analysis"
+  - name: stg_specialite
+    description: "Staging model for specialite table"
+    columns:
+      - name: idspecialite
+        description: "Unique identifier for specialite"
+      - name: datedernieremodification
+        description: "Date of last modification for specialite"
+      - name: abreviation
+        description: "Abbreviation of specialite"
+      - name: intitule
+        description: "Title of specialite"
+      - name: ordre
+        description: "Order of specialite"
+  - name: stg_statutbonanalyse
+    description: "Staging model for statutbonanalyse table"
+    columns:
+      - name: idstatutbonanalyse
+        description: "Unique identifier for statutbonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for statutbonanalyse"
+      - name: abreviation
+        description: "Abbreviation of statutbonanalyse"
+      - name: intitule
+        description: "Title of statutbonanalyse"
+      - name: ordre
+        description: "Order of statutbonanalyse"
+  - name: stg_statutconfirmationdemandebonanalyse
+    description: "Staging model for statutconfirmationdemandebonanalyse table"
+    columns:
+      - name: idstatutconfirmationdemandebonanalyse
+        description: "Unique identifier for statutconfirmationdemandebonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for statutconfirmationdemandebonanalyse"
+      - name: abreviation
+        description: "Abbreviation of statutconfirmationdemandebonanalyse"
+      - name: intitule
+        description: "Title of statutconfirmationdemandebonanalyse"
+      - name: ordre
+        description: "Order of statutconfirmationdemandebonanalyse"
+  - name: stg_statutconfirmationdemandedevis
+    description: "Staging model for statutconfirmationdemandedevis table"
+    columns:
+      - name: idstatutconfirmationdemandedevis
+        description: "Unique identifier for statutconfirmationdemandedevis"
+      - name: datedernieremodification
+        description: "Date of last modification for statutconfirmationdemandedevis"
+      - name: abreviation
+        description: "Abbreviation of statutconfirmationdemandedevis"
+      - name: intitule
+        description: "Title of statutconfirmationdemandedevis"
+      - name: ordre
+        description: "Order of statutconfirmationdemandedevis"
+  - name: stg_statutcorrespondance
+    description: "Staging model for statutcorrespondance table"
+    columns:
+      - name: idstatutcorrespondance
+        description: "Unique identifier for statutcorrespondance"
+      - name: datedernieremodification
+        description: "Date of last modification for statutcorrespondance"
+      - name: intitule
+        description: "Title of statutcorrespondance"
+  - name: stg_statutdemandeficheanalyse
+    description: "Staging model for statutdemandeficheanalyse table"
+    columns:
+      - name: idstatutdemandeficheanalyse
+        description: "Unique identifier for statutdemandeficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for statutdemandeficheanalyse"
+      - name: abreviation
+        description: "Abbreviation of statutdemandeficheanalyse"
+      - name: intitule
+        description: "Title of statutdemandeficheanalyse"
+      - name: ordre
+        description: "Order of statutdemandeficheanalyse"
+  - name: stg_statutequipement
+    description: "Staging model for statutequipement table"
+    columns:
+      - name: idstatutequipement
+        description: "Unique identifier for statutequipement"
+      - name: datedernieremodification
+        description: "Date of last modification for statutequipement"
+      - name: abreviation
+        description: "Abbreviation of statutequipement"
+      - name: intitule
+        description: "Title of statutequipement"
+      - name: ordre
+        description: "Order of statutequipement"
+  - name: stg_statutfaisabilitedemandebonanalyse
+    description: "Staging model for statutfaisabilitedemandebonanalyse table"
+    columns:
+      - name: idstatutfaisabilitedemandebonanalyse
+        description: "Unique identifier for statutfaisabilitedemandebonanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for statutfaisabilitedemandebonanalyse"
+      - name: abreviation
+        description: "Abbreviation of statutfaisabilitedemandebonanalyse"
+      - name: intitule
+        description: "Title of statutfaisabilitedemandebonanalyse"
+      - name: ordre
+        description: "Order of statutfaisabilitedemandebonanalyse"
+  - name: stg_statutfaisabilitedemandedevis
+    description: "Staging model for statutfaisabilitedemandedevis table"
+    columns:
+      - name: idstatutfaisabilitedemandedevis
+        description: "Unique identifier for statutfaisabilitedemandedevis"
+      - name: datedernieremodification
+        description: "Date of last modification for statutfaisabilitedemandedevis"
+      - name: abreviation
+        description: "Abbreviation of statutfaisabilitedemandedevis"
+      - name: intitule
+        description: "Title of statutfaisabilitedemandedevis"
+      - name: ordre
+        description: "Order of statutfaisabilitedemandedevis"
+  - name: stg_statutoperationanalyse
+    description: "Staging model for statutoperationanalyse table"
+    columns:
+      - name: idstatutoperationanalyse
+        description: "Unique identifier for statutoperationanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for statutoperationanalyse"
+      - name: abreviation
+        description: "Abbreviation of statutoperationanalyse"
+      - name: intitule
+        description: "Title of statutoperationanalyse"
+      - name: ordre
+        description: "Order of statutoperationanalyse"
+  - name: stg_tarif
+    description: "Staging model for tarif table"
+    columns:
+      - name: idtarif
+        description: "Unique identifier for tarif"
+      - name: datedernieremodification
+        description: "Date of last modification for tarif"
+      - name: qtemax
+        description: "Maximum quantity for tarif"
+      - name: qtemin
+        description: "Minimum quantity for tarif"
+      - name: tariforganismeadministratif
+        description: "Tariff for administrative organism"
+      - name: tariforganismecommercial
+        description: "Tariff for commercial organism"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: idtypeanalyse
+        description: "ID of the associated type of analysis"
+      - name: idtypetarif
+        description: "ID of the type of tariff"
+      - name: idunitemesure
+        description: "ID of the associated unit of measure"
+      - name: qteengroupe
+        description: "Quantity in group for tarif"
+      - name: idqteamultiplierpar
+        description: "ID of the quantity to be multiplied by"
+      - name: expiration
+        description: "Expiration date of tarif"
+  - name: stg_typeanalyse
+    description: "Staging model for typeanalyse table"
+    columns:
+      - name: idtypeanalyse
+        description: "Unique identifier for typeanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for typeanalyse"
+      - name: prestation
+        description: "Service provided by typeanalyse"
+      - name: tariforganismeadministratif
+        description: "Tariff for administrative organism associated with typeanalyse"
+      - name: tariforganismecommercial
+        description: "Tariff for commercial organism associated with typeanalyse"
+      - name: idlaboratoire
+        description: "ID of the associated laboratory"
+      - name: intitule
+        description: "Title of typeanalyse"
+      - name: desactivation
+        description: "Indicates if typeanalyse is deactivated"
+      - name: disponibilite
+        description: "Indicates if typeanalyse is available"
+  - name: stg_typechamp
+    description: "Staging model for typechamp table"
+    columns:
+      - name: idtypechamp
+        description: "Unique identifier for typechamp"
+      - name: datedernieremodification
+        description: "Date of last modification for typechamp"
+      - name: abreviation
+        description: "Abbreviation of typechamp"
+      - name: intitule
+        description: "Title of typechamp"
+      - name: ordre
+        description: "Order of typechamp"
+  - name: stg_typecorrespondance
+    description: "Staging model for typecorrespondance table"
+    columns:
+      - name: idtypecorrespondance
+        description: "Unique identifier for typecorrespondance"
+      - name: datedernieremodification
+        description: "Date of last modification for typecorrespondance"
+      - name: intitule
+        description: "Title of typecorrespondance"
+      - name: ordre
+        description: "Order of typecorrespondance"
+  - name: stg_typeetablissement
+    description: "Staging model for typeetablissement table"
+    columns:
+      - name: idtypeetablissement
+        description: "Unique identifier for typeetablissement"
+      - name: datedernieremodification
+        description: "Date of last modification for typeetablissement"
+      - name: abreviation
+        description: "Abbreviation of typeetablissement"
+      - name: intitule
+        description: "Title of typeetablissement"
+      - name: ordre
+        description: "Order of typeetablissement"
+  - name: stg_typetarif
+    description: "Staging model for typetarif table"
+    columns:
+      - name: idtypetarif
+        description: "Unique identifier for typetarif"
+      - name: datedernieremodification
+        description: "Date of last modification for typetarif"
+      - name: abreviation
+        description: "Abbreviation of typetarif"
+      - name: intitule
+        description: "Title of typetarif"
+      - name: ordre
+        description: "Order of typetarif"
+      - name: qteengroupe
+        description: "Quantity in group for typetarif"
+  - name: stg_unitemesure
+    description: "Staging model for unitemesure table"
+    columns:
+      - name: idunitemesure
+        description: "Unique identifier for unitemesure"
+      - name: datedernieremodification
+        description: "Date of last modification for unitemesure"
+      - name: abreviation
+        description: "Abbreviation of unitemesure"
+      - name: intitule
+        description: "Title of unitemesure"
+      - name: ordre
+        description: "Order of unitemesure"
+      - name: valeur
+        description: "Value of unitemesure"
+  - name: stg_user_authorities
+    description: "Staging model for user_authorities table"
+    columns:
+      - name: idauthoritie
+        description: "Unique identifier for user authority"
+      - name: datedernieremodification
+        description: "Date of last modification for user authority"
+      - name: authority
+        description: "Authority name for user"
+      - name: iduser
+        description: "ID of the user associated with the authority"
+  - name: stg_users
+    description: "Staging model for users table"
+    columns:
+      - name: iduser
+        description: "Unique identifier for user"
+      - name: datedernieremodification
+        description: "Date of last modification for user"
+      - name: enabled
+        description: "Indicates if the user is enabled"
+      - name: initialized
+        description: "Indicates if the user is initialized"
+      - name: ismentionlegalvalid
+        description: "Indicates if the legal mention is valid for the user"
+      - name: istested
+        description: "Indicates if the user is tested"
+      - name: password
+        description: "Password of the user"
+      - name: username
+        description: "Username"
+      - name: iscompteactive
+        description: "Indicates if the user account is active"
+      - name: cleactivation
+        description: "Activation key for the user account"
+  - name: stg_valeurproposee
+    description: "Staging model for valeurproposee table"
+    columns:
+      - name: idvaleurproposee
+        description: "Unique identifier for valeurproposee"
+      - name: datedernieremodification
+        description: "Date of last modification for valeurproposee"
+      - name: abreviation
+        description: "Abbreviation of valeurproposee"
+      - name: intitule
+        description: "Title of valeurproposee"
+      - name: ordre
+        description: "Order of valeurproposee"
+  - name: stg_valeurproposeeficheanalyse
+    description: "Staging model for valeurproposeeficheanalyse table"
+    columns:
+      - name: idvaleurproposeeficheanalyse
+        description: "Unique identifier for valeurproposeeficheanalyse"
+      - name: datedernieremodification
+        description: "Date of last modification for valeurproposeeficheanalyse"
+      - name: abreviation
+        description: "Abbreviation of valeurproposeeficheanalyse"
+      - name: intitule
+        description: "Title of valeurproposeeficheanalyse"
+      - name: ordre
+        description: "Order of valeurproposeeficheanalyse"

@@ -1,0 +1,11 @@
+uatrs_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost  
+      port: 5433
+      user: uatrs_user
+      password: uatrs_pass
+      dbname: uatrs_db
+      schema: uatrs_db

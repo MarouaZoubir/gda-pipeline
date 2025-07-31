@@ -1,0 +1,24 @@
+{
+  "name": "uatrs-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "database.hostname": "source-mysql",
+    "database.port": "3306",
+    "database.user": "root",
+    "database.password": "rootpass",
+    "database.server.id": "184054",
+    "database.server.name": "uatrs",
+    "database.include.list": "uatrs_db",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "schema-changes.uatrs",
+    "include.schema.changes": "true",
+    "time.precision.mode": "connect",
+    "decimal.handling.mode": "double",
+    "tombstones.on.delete": "true",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.delete.handling.mode": "rewrite"
+  }
+}

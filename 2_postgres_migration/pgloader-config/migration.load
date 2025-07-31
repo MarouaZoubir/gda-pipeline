@@ -1,0 +1,24 @@
+LOAD DATABASE
+    FROM mysql://uatrs_user:uatrs_pass@source-mysql:3306/uatrs_db
+    INTO postgresql://uatrs_user:uatrs_pass@target-postgres:5432/uatrs_db
+
+WITH drop schema,               
+     create tables,
+     create indexes,
+     reset sequences,
+     foreign keys,
+     preserve index names,
+     workers = 8,
+     concurrency = 2
+
+CAST
+    type datetime to timestamptz,
+    type date to date,
+    type tinyint to boolean
+
+BEFORE LOAD DO
+    $$ CREATE SCHEMA IF NOT EXISTS uatrs_db $$,
+    $$ SET search_path TO uatrs_db $$
+
+AFTER LOAD DO
+    $$ SET search_path TO uatrs_db $$;
