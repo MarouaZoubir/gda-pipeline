@@ -35,20 +35,22 @@ text
 | metabase         | Visualization and BI dashboard                   |
 
 ## 📁 Project Structure
+
+```
 .
 ├── docker-compose.yml
 ├── 1_mysql_initialization/
-│ └── sql/ # Initial SQL scripts for MySQL
+│   └── sql/                       # Initial SQL scripts for MySQL
 ├── 2_postgres_migration/
-│ ├── pgloader-config/
-│ │ └── migration.load # pgloader configuration
-│ └── debezium-config/
-│ └── mysql-connector.json # Debezium config
+│   ├── pgloader-config/
+│   │   └── migration.load         # pgloader configuration
+│   └── debezium-config/
+│       └── mysql-connector.json  # Debezium config
 └── data_pipeline/
-├── data_pipeline/ # Dagster project (C:\Users\HA\Desktop\stage-gda-real\uatrs-data-pipeline\data_pipeline\data_pipeline)
-└── dbt/ # dbt project
+    ├── data_pipeline/            # Dagster project
+    └── dbt/                      # dbt project
+```
 
-text
 
 ## 🛠️ Requirements
 
